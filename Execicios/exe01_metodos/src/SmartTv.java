@@ -38,7 +38,7 @@ public class SmartTv {
     public void diminuirCanal(){
         this.canal --;
     }
-    public void canal(int canalDigitado){
+    public void mudarCanal(int canalDigitado){
         this.canal = canalDigitado;
     }
 

@@ -7,7 +7,7 @@ public class Usuário {
 
 
         //Informações do Usuário
-        smartTv.canal(25);
+        smartTv.mudarCanal(25);
 
         smartTv.aumentarVolume();
 
