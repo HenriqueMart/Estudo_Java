@@ -1,0 +1,32 @@
+//Utilizando Parâmetro para iniciar um argumento 
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Estudo_Java_13fd4982"
+        },
+        {
+            "type": "java",
+            "name": "ScannerTeste",
+            "request": "launch",
+            "mainClass": "ScannerTeste",
+            "projectName": "Estudo_Java_13fd4982"
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "mainClass": "AboutMe",
+            "args": [
+                "GLEYSON",
+                "SAMPAIO",
+                "28",
+                "1.58"
+            ]
+        }
+    ]
+}
