@@ -69,4 +69,12 @@ public class ContaTerminal {
             return ;
         }
     }
+
+    //Método get e set
+    private void setSaldo(float novoSaldo){
+        this.saldo = novoSaldo;
+    }
+    private float getSaldo(){
+        return this.saldo;
+    }
 }
