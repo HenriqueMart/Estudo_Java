@@ -7,7 +7,20 @@ public class ProcessoSeletivo {
         Scanner teclado = new Scanner(System.in);
 
         //Chamando os métodos de selecionar o candidatos
+        System.out.println("-----------------------------------------------");
         selecaoCandidatos();
+        System.out.println("-----------------------------------------------");
+        imprimirSelecionado();
+    }
+
+    static void imprimirSelecionado(){
+        String[] candidatos = {"Felipe","Marcia","Julia", "Paulo", "Augusto"};
+
+        
+
+        for(String candidado: candidatos){
+            System.out.println("O candidato " + candidado + " Foi selecionado");
+        }
     }
 
     static void selecaoCandidatos(){
@@ -23,10 +36,10 @@ public class ProcessoSeletivo {
             candidato = candidatos[candidatosAtual];
             salarioPretendido = valorPretendido();
 
-            System.out.println("O candidato(a): " + candidato + "Solicitou este valor de salário " + salarioPretendido);
+            System.out.println("O candidato(a): " + candidato + " Solicitou este valor de salário " + salarioPretendido);
             //Verificando ser é menor que o salário base
             if (salarioBase >= salarioPretendido) {
-                System.out.println("O candidatos " + candidato + "Foi selecionando pela vaga");
+                System.out.println("O candidatos " + candidato + ", Foi selecionando pela vaga");
                 candidatosSelecionados ++;
             }else{
 
