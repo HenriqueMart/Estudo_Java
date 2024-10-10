@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -11,6 +12,11 @@ public class ProcessoSeletivo {
         selecaoCandidatos();
         System.out.println("-----------------------------------------------");
         imprimirSelecionado();
+        System.out.println("-----------------------------------------------");
+        String[] candidatos = {"Felipe","Marcia","Julia", "Paulo", "Augusto"};
+        for (String candidato : candidatos) {
+            entrandoEmContato(candidato);
+        }
     }
 
     static void imprimirSelecionado(){
@@ -23,6 +29,33 @@ public class ProcessoSeletivo {
         }
     }
 
+    static void entrandoEmContato(String candidato){
+        int tentativaRealizada = 1;
+        boolean continuarTentando = true;
+        boolean atendeu = false;
+
+        do{
+            atendeu = atender();
+            continuarTentando = !atendeu;
+            if(continuarTentando)
+                tentativaRealizada ++;
+            else{
+                System.out.println("Contato Realizado com Sucesso!");
+            }
+
+
+        }while(continuarTentando && tentativaRealizada < 3);
+
+        if(atendeu){
+            System.out.println("Conseguimos contato com " + candidato + " Nas " + tentativaRealizada + " Realizado");
+        }else
+            System.out.println("Não Conseguimos contato com " + candidato + " Nas " + tentativaRealizada + " Realizado");
+
+    }
+
+    static boolean atender(){
+        return new Random().nextInt(3)==1;
+    }
     static void selecaoCandidatos(){
         //Criando um array de Candidatos Selecionado
         String[] candidatos = {"Felipe","Marcia","Julia", "Paulo", "Augusto", "Monica", "Fabricio", "Mirela", "Jose"};
